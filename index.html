@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Snowfall</title>
+		<script>
+			
+			confirm("Snow is falling.  The air is still.  The sky is a deep blue.  Night will fall within the hour.");
+			confirm("You wrap your scarf around your head, and pull your hands further up the sleeves of your jacket.  Now that the wind has stopped, this will be enough to keep you warm.  You trudge onwards.");
+			var r1 = prompt("It must have been hours ago that you left the city.  Looking back, you can barely see the lights through the snow.  You think back to the dream that you had last night.  You dreamed that you saw your childhood friend for the first time in years.  He said to you, \"Type only in lowercase, only answer with one word, and never use punctuation.\"  Do you understand the dream?");
+			
+			if(r1 === "yes") {
+				confirm("You think that you understand what he was trying tell you.  After all, these kinds of things have come in handy before.");
+			}else if(r1 === "no") {
+				confirm("Dreams can be strange somtimes.  You can't make heads or tails of this one, but it may come in handy anyway.");
+			}else{
+				confirm("Let me spell it out more clearly, then.  I will only be able to communicate with you if your responses contain only one word, and you never use capital letters or any punctuation.  Now hurry, night is falling.");
+			}	
+			
+			confirm("You trudge onwards.");
+			
+			
+			var g1 = 0;
+			var g2 = 0;
+			while(g1 === 0){
+				var r2 = prompt("The fresh SNOW crunches beneath your boots.  You LOOK around, but you see only frozen branches and frozen earth.");
+				if(r2 === "snow") {
+					confirm("If you had left home only a few days earlier, your journey would have been much easier.  This is the first snow of the season, and you were not expecting it.");
+					g1 = 1;
+				}else if(r2 === "look") {
+					confirm("You stop and look around.  The leaves from the trees lie on the ground in patches where the snow has not yet covered them.  You think you might see a bird's nest, but when you look closer, you see that it is only a vine.  You turn back to the path.");
+					g1 = 1;
+				}else if(r2 === "SNOW") {
+					confirm("You suddenly remember the dream about using only lowercase letters.");
+				}else if(r2 === "LOOK") {
+					confirm("You suddenly remember the dream about using only lowercase letters.");
+				}else{
+					g2 = g2 + 1;
+				}
+				
+				if(g2 > 2) {
+					confirm("If you see words in the prompt that are capitalized, try typing them (in all lowercase, of course).");
+					g1 = 1;
+				}
+			}
+			
+			confirm("You trudge onwards.");
+			
+			g1 = 0;
+			g2 = 0;
+			while(g1 === 0) {
+				var r3 = prompt("You count your steps as you walk - fourteen, fifteen, sixteen... forty-two, forty-three, forty-four... eighty-eight, eighty-nine...  The wind is starting to pick up again.  You could CONTINUE, but it might be better to TURN your face away from the wind and wait for it to stop.");
+				if(r3 === "continue") {
+					confirm("Hypothermia be damned, you're going to make it through this one way or another.  You pull your scarf around your face, lean forward, and march straight into the wind.");
+					confirm("This isn't the first time that you've been cold, after all.  If it becomes too much, you'll take a break, but for now, you are unstoppable.");
+					confirm("Just as you suspected, the wind begins to lessen.  The snow seems to be stopping as well.  Soon, all you hear is the sound of your own breath, and the crunch of the snow beneath your feet.  You pull your scarf back from your face and take a look around.");
+					g1 = 1;
+				}else if(r3 === "turn") {
+					confirm("You've come so far already, it would be a shame to let hypothermia stop you now.  You turn away from the wind, but it still whips through the cracks in your jacket.");
+					confirm("You crouch down and bundle yourself up as well as you can.  If only you had left earlier in the day, the sun would still be shining...  It will only get colder tonight.");
+					confirm("The wind begins to lessen after a few minutes.  To your surprise, the snow is stopping as well.  You stand up and take a look around.");
+					g1 = 1;
+				}else{
+					confirm("I'm having trouble hearing you over the wind.  Did you say that you want to \"continue\" walking or \"turn\" away from the wind?");
+					g2 = g2 + 1;
+				}
+				
+				if(g2 > 2) {
+					confirm("You never were the kind of person to give a straight answer, not even in the middle of the woods at night.  You stand there, facing the wind, immobile as a statue, waiting for the wind and the snow to stop.  Surprisingly, they do.  You take a look around.");
+					g1 = 1;
+				}
+			}
+			
+			confirm("The moon shines brightly.");
+			
+			g1 = 0;
+			g2 = 0;
+			var g3 = 0;
+			while(g1 === 0) {
+				var r4 = prompt("In the moonlight, you can see that the path continues on to your right.  To your left, there is a small clearing.  You would prefer to make it through the forest before you stop for the night, but you see that it is getting dark.  You could probably CONTINUE onward by moonlight, but it wouldn't hurt to REST here.");
+				if(r4 === "continue") {
+					confirm("You turn to the left, and continue down the path.");
+					confirm("Now that the snow has stopped, you can see clearly in front of you.  The snow underfoot seems to be glowing in the moonlight.  Color no longer has any meaning in this place.  The snow is white; the branches are black; you are gray.  You step over a tree stump, and there is nobody to see it.");
+					confirm("You are alone.");
+					confirm("You trudge onwards.");
+					g1 = 1;
+					g3 = 1;
+				}else if(r4 === "rest") {
+					confirm("You take a few steps to the left, and you find yourself in a small clearing.  You have nothing with you.  You sit down on the ground.");
+					confirm("The air is still.");
+					g1 = 1;
+					g3 = 2;
+				}else{
+					confirm("I'm afraid you're going to have to speak up - did you say that you want to \"continue\" walking or \"rest\" at the clearing?");
+					g2 = g2 + 1;
+				}
+				
+				if(g2 > 2) {
+					confirm("There is no time to stand here thinking.  You continue down the path.");
+					g1 = 1;
+					g3 = 1;
+				}
+			}
+			
+			
+			if(g3 === 2) {
+			
+				g1 = 0;
+				g2 = 0;
+				var r5 = "beluga"
+				while(r5 !== "listen") {
+					r5 = prompt("You LOOK around you, at the SNOW, the TREES, the frozen GROUND, the SKY.  You LISTEN for any animals or BIRDS, but you hear NOTHING.");
+					if(r5 === "look") {
+						confirm("Your eyes are tired, but you take in your surroundings.  the clearing is barely wide enough for you to lie down, but at least it is off of the main path.");
+					}else if(r5 === "snow") {
+						confirm("This is new snow, and your footprints are the only marks in the surface.  Back on the trail, you see what might be a few rabbit tracks.  There are a few patches where the snow didn't make it through the trees, and you see dark earth.");
+					}else if(r5 === "trees") {
+						confirm("All of the trees have lost their leaves by now.  It must have happened within the last few weeks.");
+					}else if(r5 === "ground") {
+						confirm("You dig down into the snow.  It is only a few inches deep, but the ground underneath is frozen.  The winter up until this last week has been cold but clear.");
+					}else if(r5 === "sky") {
+						confirm("The sky is clear.  The moon is bright.  The air is still.");
+					}else if(r5 === "listen") {
+						confirm("You listen carefully.  Are those footsteps?  Yes, there can be no mistaking it - someone else is coming down the path.");
+						confirm("The footfalls are soft yet steady.  You can just begin to make out a figure walking down the path towards you.");
+					}else if(r5 === "birds") {
+						confirm("There are no birds in the trees.  Not at this time of year.");
+					}else if(r5 === "nothing") {
+						confirm("The air is still, now that the snow has stopped.");
+					}else{
+						g2 = g2 + 1;
+					}
+					
+					if(g2 > 3) {
+						confirm("You hear footfalls coming down the path towards you.  In the distance, a figure approaches.");
+						r5 = "listen"
+					}
+					
+					
+				}
+				
+				confirm("The footsteps draw nearer.  All else is silent.");
+				
+				g1 = 0;
+				g2 = 0;
+				
+				r6 = prompt("Do you hide from the approaching figure?");
+				if(r6 === "yes" || r6 === "hide") {
+					confirm("You curl up in a ball at the far edge of the clearing.");
+					confirm("You hold your breath.");
+					confirm("The footsteps stop outside the clearing.  A voice calls out, \"Hello there.\"");
+					confirm("You look up to see a young man in a red overcoat.  He smiles.");
+				}else{
+					confirm("These woods are too sparse; you have no hope of hiding here.  The figure has almost reached the clearing.");
+					confirm("You call out, \"Hello, there!\"  The figure steps into the moonlight.  It is a young man in a red overcoat.  He looks at you, as if about to ask a question.");
+				}
+				
+				
+				confirm("The man begins to speak:");
+			
+				var name1 = prompt("\"What is your name, stranger?\"");
+				confirm("The man holds out his hand.");
+				var town1 = prompt("\"It's nice to meet you.  My name is Jeremy.  What town are you from?\"");
+				
+				if((town1 === "none") || (town1 === "nowhere") || (town1 === "around")) {
+					confirm("\"A traveler, then.\"  You nod your head.  The man looks up to the stars.  \"I've always wanted to get up and leave home for good.\"");
+				}else{
+					confirm("\"You've come a long way, then.\"  You nod your head.");
+				}
+				
+				var name2 = prompt("\"Hey, what was your name again?  I'm horrible at remembering names.  It just goes in one ear and out the other.\"");
+				
+				confirm("The man nods absent-mindedly.  He doesn't seem to be paying attention.");
+				
+				var r7 = prompt("\"Listen, would you like a sandwich?  I don't meet many people on this road, but I try to help out when I can.  You aren't looking too good.\"");
+				
+				if((r7 === "yes") || (r7 === "sure") || (r7 === "okay") || (r7 === "ok") || (r7 === "yeah") || (r7 === "thanks")) {
+					confirm("He pulls a ham sandwich out from the front pocket of his coat and hands it to you.  You offer to split the sandwich.");
+					confirm("\"No, no, I ate before I left home.  Please, eat it all.  You need it more than I do.\"  You bite into the sandwich.  It's fresh enough.");
+				}else{
+					confirm("\"Well, at least I offered.  Let me know if you change your mind.\"  He pats a sandwich-sized pocket in the front of his coat.");
+				}
+				
+				confirm("The man sits down next to you.");
+				
+				var purpose = prompt("\"I'm on my way to Calagary, myself.  Just like every Thursday.  What brings you here?\"");
+				
+				confirm("The man frowns.  \"Be careful, " + name2 + ".  I've seen many a good man and many a fair lady walk this road with the same goal.  Not a single man has returned with joy in his heart.  Three women came close, but they were... special.  I won't try to stop you, but I must ask you not to take this lightly.\"");
+				
+				var town2 = prompt("The man smiles again, but sadly this time..  \"I don't want to scare you, but I've seen too many people lose their hearts out there.  I just wish you lot would stop with all of this adventuring nonsense.  What town will you be staying in tonight?");
+				
+				confirm("\"It's not too far from here.  I would walk with you, but I was supposed to be in Calagary by sunset, and I've obviously missed that by at least an hour.  Evaryone will be wondering where I've ended up this time.\"");
+				confirm("The man stands up and begins to leave.  \"Best of luck with your journey, " + name1 + ".  I hope to see you around sometime.\"  He walks off down the trail.");
+				
+				confirm("Once again, all is quiet.");
+				confirm("You finish your sandwich, and look around.  You no longer feel tired.");
+				confirm("The sky is clear.");
+				confirm("The snow crunches beneath your feet.");
+				confirm("You reach " + town2 + " before sunrise.");
+				
+				
+			}
+					
+			if(g3 === 1) {
+				confirm("The trees begin to thin.  The snow is heavier here, but it is still not much more than a few inches deep.");
+				confirm("You realize that you have stepped out to the forest.  This must mean that you are over halfway there already. Only a few days left.");
+				confirm("An open plain stretches out in front of you.  In the distance, three groups of lights form a wide triangle.  You are not sure that you will have enough energy to make it to the nearest town tonight.");
+				
+				g1 = 0;
+				g2 = 0;
+				while(g1 === 0) {
+					var r8 = prompt("You take stock of your options.  You could walk.  You could run.  You could dance.  You could cry.  You could rest.");
+					if(r8 === "walk") {
+						confirm("You have been walking for hours.  Why stop now?");
+						confirm("Perhaps it is the ground that moves beneath you feet, as your body stands still.");
+						confirm("Perhaps the stars are shining for you alone.");
+						confirm("By midnight, the town has reached you.  The earth stops moving as you find a bed.");
+						g1 = 1;
+					}else if(r8 === "run")  {
+						confirm("You always loved the plains.  It would be a shame not to run through the snow.");
+						confirm("You fly down the hill, running as fast as your legs will carry you.  Before long, your energy is gone, and you stop to rest.");
+						confirm("When you awaken, the sky is still dark.");
+						confirm("You arrive in town by sunrise.");
+						g1 = 1;
+					}else if(r8 === "dance") {
+						confirm("You begin to dance as though your life depended on it.");
+						confirm("You dance as though it would bring rain to the crops.");
+						confirm("You dance as though it would bring sunshine to this dark night.");
+						confirm("You dance until you fall asleep.");
+						confirm("The sun rises.");
+						confirm("You awaken.");
+						confirm("You arrive in town by noon.");
+						g1 = 1;
+					}else if(r8 === "cry") {
+						confirm("This is no time for tears.  You cry out to the heavens.  You cry out as though nobody can hear you.");
+						confirm("Nobody hears you.");
+						confirm("Nobody but a mouse.  He is the first sign of life that you have seen today.  He dives under the snow.");
+						confirm("You look for more mice, but you are too tired.");
+						confirm("You awaken at sunrise");
+						confirm("You arrive in town by noon.");
+						g1 = 1;
+					}else if(r8 === "rest") {
+						confirm("You bundle your scarf beneath your head, and lie down to rest.");
+						confirm("You awaken at sunrise.");
+						confirm("You arrive in town by noon.");
+						g1 = 1;
+					}else{
+						g2 = g2 + 1;
+					}
+					
+					if(g2 > 2) {
+						confirm("On second thought, you don't like any of those options anyway.  You lie down in the snow and stare up at the stars.");
+						confirm("You try to make shapes in the sky, but you are too tired.");
+						confirm("You awaken at sunrise.");
+						confirm("You arrive in town by noon.");
+						g1 = 1;
+					}
+
+				}
+
+			}
+						
+						
+						
+						
+		</script>
+</head>
+
+<body>
+</body>
+        
+</html>
