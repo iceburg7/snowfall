@@ -185,6 +185,10 @@
 				
 				var purpose = prompt("\"I'm on my way to Calagary, myself.  Just like every Thursday.  What brings you here?\"");
 				
+				if(purpose === "nothing") {
+					purpose = prompt("Come on now, there must be some reason that you're out here.");
+				}
+				
 				confirm("The man frowns.  \"Be careful, " + name2 + ".  I've seen many a good man and many a fair lady walk this road with the same goal.  Not a single man has returned with joy in his heart.  Three women came close, but they were... special.  I won't try to stop you, but I must ask you not to take this lightly.\"");
 				
 				var town2 = prompt("The man smiles again, but sadly this time..  \"I don't want to scare you, but I've seen too many people lose their hearts out there.  I just wish you lot would stop with all of this adventuring nonsense.  What town will you be staying in tonight?");
